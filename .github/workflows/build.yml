@@ -36,7 +36,7 @@ jobs:
       contents: read
     steps:
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: |
           6.0.x
@@ -77,7 +77,7 @@ jobs:
         Write-Host "$(pwsh --version) is installed at $PSHOME"
         Write-Host "Active .NET SDK: $(dotnet --version)"
     - name: Git checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Restore tools
       run: |
         dotnet tool restore
@@ -149,13 +149,13 @@ jobs:
       contents: read
     steps:
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: |
           6.0.x
           8.0.x
     - name: Git checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Restore tools
       run: |
         dotnet tool restore
@@ -202,13 +202,13 @@ jobs:
       contents: read
     steps:
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: |
           6.0.x
           8.0.x
     - name: Git checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 2
     - name: Restore tools
